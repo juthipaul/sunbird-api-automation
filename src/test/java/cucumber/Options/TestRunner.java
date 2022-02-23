@@ -1,13 +1,18 @@
-package cucumber.Options;
+package cucumberOption;
 
 import org.junit.runner.RunWith;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/features",
-        plugin ={"html:target/cucumberHTMLReport","json:target/jsonReports/cucumber-report.json"},
-        glue= {"stepDefinations"})
+@CucumberOptions
+(
+		features = "src/test/java/features/question.feature",
+		glue= { "stepDefinitions/"},
+		tags= {"@question"},
+		plugin= {"json:target/jsonReports/cucumber-report.json"}
+)
 public class TestRunner {
-//tags= {"@DeletePlace"}  compile test verify
+
 }
