@@ -10,9 +10,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-		features = "src/test/java/features",
+		features = "src/test/java/features/question.feature",
 		glue= { "stepDefinitions/"},
-		tags= {"@User"},
+		tags= {"@question"},
 		plugin= {"json:target/jsonReports/cucumber-report.json"}
 		
 )
