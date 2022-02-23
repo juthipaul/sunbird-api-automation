@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions
 (
 		features = "src/test/java/features/question.feature",
-		glue= { "stepDefinitions/"},
+		glue= { "src/test/java/stepDefinitions/"},
 		tags= {"@question"},
 		plugin= {"json:target/jsonReports/cucumber-report.json"}
 )
