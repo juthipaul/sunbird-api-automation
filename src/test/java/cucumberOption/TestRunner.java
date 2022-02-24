@@ -1,18 +1,14 @@
-package cucumberOption;
+package cucumber.Options;
 
 import org.junit.runner.RunWith;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
-@CucumberOptions
-(
-		features = "src/test/java/features/question.feature",
-		glue= { "stepDefinitions/"},
-		tags= {"@question"},
-		plugin= {"json:target/jsonReports/cucumber-report.json"}
+@CucumberOptions(
+		features="src/test/java/features",
+		plugin ={"html:target/cucumberHTMLReport","json:target/jsonReports/cucumber-report.json"},
+		glue= {"src/test/java/stepDefinations"}
 )
 public class TestRunner {
-
 }
