@@ -8,10 +8,15 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-		features = "src/test/java/features/question.feature",
-		glue= { "stepDefinitions/"},
+		//features = "src/test/java/features/question.feature",
+		//glue= { "stepDefinitions/"},
 		//tags= {"@question"},
-		plugin= {"json:target/jsonReports/cucumber-report.json"}
+		//plugin= {"json:target/jsonReports/cucumber-report.json"}
+	
+		features = "Feature"
+		,glue={"stepDefinition"}
+		,dryRun = true
+	
 )
 public class TestRunner {
 
