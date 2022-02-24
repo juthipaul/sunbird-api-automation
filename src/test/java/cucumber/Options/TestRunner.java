@@ -13,8 +13,8 @@ import cucumber.api.junit.Cucumber;
 		//tags= {"@question"},
 		//plugin= {"json:target/jsonReports/cucumber-report.json"}
 	
-		features = "Feature"
-		,glue={"stepDefinition"}
+		features = "features"
+		,glue={"stepDefinitions"}
 		,dryRun = true
 	
 )
